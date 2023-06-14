@@ -27,9 +27,6 @@ function buildGraph(edges) {
 const roadGraph = buildGraph(roads);
 console.log(roadGraph);
 
-
-
-
 class VillageState {
     constructor(place, parcels) {
         this.place = place;
