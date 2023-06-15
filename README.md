@@ -50,3 +50,7 @@ The `constructor` method initializes a new instance of the `VillageState` class.
 `parcels`: an array of objects representing the parcels.
 
 The `move` method simulates the movement of the robot delivering parcels. It takes one parameter: `destination` and its current location is `this.place`. It checks whether there's a valid road connection between its location and the destination. If there is not, it returns its current state. If there is a valid connection, on the other hand, it creates a new array of parcels using the `map()` function. For each parcel `p` in the current state's array, it checks whether the parcel's place (current location) matches the robot's place (current location). If they do match, it creates a new parcel object with the same address as the orginal parcel but with the place set to the destination. If they don't match, it returns the parcel as it is. 
+
+After mapping the parcels, it filters the parcels to remove those that already reached their destination. It checks whether the `place` property is not equal to the `address` property for each parcel and filters out those that match. This ensures that only the parcels that still need to be delivered in the array.
+
+At the end, the class returns a new `VillageState` instance with the `destination` as the new `place` and the updates `parcels` array. 
