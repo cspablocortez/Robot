@@ -34,7 +34,7 @@ class VillageState {
 
 The class `VillageState` represents the Meadowfield town's state.
 
-```javasscript
+```javascript
 class VillageState {
     constructor(place, parcels) {
         this.place = place;
