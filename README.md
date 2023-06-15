@@ -11,7 +11,7 @@
 
  ## Class VillageState
 
- ```
+ ```javascript
 class VillageState {
     constructor(place, parcels) {
         this.place = place;
@@ -34,12 +34,13 @@ class VillageState {
 
 The class `VillageState` represents the Meadowfield town's state.
 
-```
+```javasscript
 class VillageState {
     constructor(place, parcels) {
         this.place = place;
         this.parcels = parcels;
     }
+}
 ```
 
 The `constructor` method initializes a new instance of `VillageState` class. It takes two parameters: `place` and `parcels`.
