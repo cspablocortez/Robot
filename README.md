@@ -8,3 +8,44 @@
  The village of Meadowfield.
 
  ![Meadowfield](https://eloquentjavascript.net/img/village2x.png)
+
+ ## Class VillageState
+
+ ```
+class VillageState {
+    constructor(place, parcels) {
+        this.place = place;
+        this.parcels = parcels;
+    }
+
+    move(destination) {
+        if(!roadGraph[this.place].includes(destination)) {
+            return this;
+        } else {
+            let parcels = this.parcels.map(p => {
+                if (p.place != this.place) return p;
+                return {place: destination, address: p.address};
+            }).filter(p => p.place != p.address);
+            return new VillageState(destination, parcels);
+        }
+    }
+}
+ ```
+
+The class `VillageState` represents the Meadowfield town's state.
+
+```
+class VillageState {
+    constructor(place, parcels) {
+        this.place = place;
+        this.parcels = parcels;
+    }
+```
+
+The `constructor` method initializes a new instance of `VillageState` class. It takes two parameters: `place` and `parcels`.
+
+`place`: specifies the robot's current location.
+
+`parcels`: an array of objects representing the parcels.
+
+
