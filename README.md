@@ -43,10 +43,15 @@ class VillageState {
 }
 ```
 
-The `constructor` method initializes a new instance of `VillageState` class. It takes two parameters: `place` and `parcels`.
+The `constructor` method initializes a new instance of the `VillageState` class. It takes two parameters: `place` and `parcels`.
 
 `place`: specifies the robot's current location.
 
 `parcels`: an array of objects representing the parcels.
+
+The `move` method simulates the movement of the robot delivering parcels. It takes one parameter: `destination` and its current location is `this.place`. It checks wheter there's a valid road connection between its location and the destination. If there is not, it returns its current state.
+
+
+
 
 
